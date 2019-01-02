@@ -42,7 +42,6 @@ namespace courseworkone
             catch (FormatException ex)
             {
                 Console.WriteLine(ex.Message + "Please enter a number");
-                throw;
             }
 
             // now to calculate the totals for overal sales
