@@ -42,6 +42,9 @@ namespace courseworkone
             catch (FormatException ex)
             {
                 Console.WriteLine(ex.Message + "Please enter a number");
+                Console.WriteLine("Program will now close press any key to exit");
+                Console.ReadKey();
+                return;
             }
 
             // now to calculate the totals for overal sales
@@ -83,3 +86,4 @@ namespace courseworkone
         }
     }
 }
+
