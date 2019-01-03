@@ -28,14 +28,12 @@ namespace courseworkone
                     Console.Write("\nPlease enter the name of Store: ");
                     storeNames[i] = Console.ReadLine();
                     Console.Write("Please enter the quarterly sales for " + storeNames[i] + " please enter the digits in thousands i.e 12,000 as 12 :\n");
-                    Console.Write("Please enter the Q1 sales for " + storeNames[i] + "\n");
-                    storeSales[i, 0] = Convert.ToInt32(Console.ReadLine());
-                    Console.Write("Please enter the Q2 sales for " + storeNames[i] + "\n");
-                    storeSales[i, 1] = Convert.ToInt32(Console.ReadLine());
-                    Console.Write("Please enter the Q3 sales for " + storeNames[i] + "\n");
-                    storeSales[i, 2] = Convert.ToInt32(Console.ReadLine());
-                    Console.Write("Please enter the Q4 sales for " + storeNames[i] + "\n");
-                    storeSales[i, 3] = Convert.ToInt32(Console.ReadLine());
+                    //another for loop instead of copy and pasting the same code for the question 4 times
+                    for (int j = 0; j < storeNames.Length; j++)
+                    {
+                        Console.Write("Please enter the Q" + (j +1) + " sales for " + storeNames[i] + "\n");
+                        storeSales[i, j] = Convert.ToInt32(Console.ReadLine());
+                    }
                 }
             }
 
@@ -72,18 +70,15 @@ namespace courseworkone
 
             // all variables have been set so we will now display the table
 
-            Console.WriteLine("\n");
-            Console.WriteLine("Sales figures: " + "\t" + storeNames[0] + "\t" + storeNames[1] + "\t" + storeNames[2] + "\t" + storeNames[3] + "\t" + "Overall" + "\n");
+            Console.WriteLine("\nSales figures: " + "\t" + storeNames[0] + "\t" + storeNames[1] + "\t" + storeNames[2] + "\t" + storeNames[3] + "\t" + "Overall" + "\n");
             Console.WriteLine("Quarter one: " + "\t" + storeSales[0, 0] + "\t" + storeSales[1, 0] + "\t" + storeSales[2, 0] + "\t" + storeSales[3, 0] + "\t" + dubOverallQ1 + "\n");
             Console.WriteLine("Quarter two: " + "\t" + storeSales[0, 1] + "\t" + storeSales[1, 1] + "\t" + storeSales[2, 1] + "\t" + storeSales[3, 1] + "\t" + dubOverallQ2 + "\n");
             Console.WriteLine("Quarter three: " + "\t" + storeSales[0, 2] + "\t" + storeSales[1, 2] + "\t" + storeSales[2, 2] + "\t" + storeSales[3, 2] + "\t" + dubOverallQ3 + "\n");
             Console.WriteLine("Quarter four: " + "\t" + storeSales[0, 3] + "\t" + storeSales[1, 3] + "\t" + storeSales[2, 3] + "\t" + storeSales[3, 3] + "\t" + dubOverallQ4 + "\n");
             Console.WriteLine("Total: " + "\t\t" + dubTotals1 + "\t" + dubTotals2 + "\t" + dubTotals3 + "\t" + dubTotals4 + "\t" + dubgrandTotal);
-            Console.WriteLine("\n");
-            Console.WriteLine(" %  Overall: " + "\t" + storeNames[0] + "\t" + storeNames[1] + "\t" + storeNames[2] + "\t" + storeNames[3]);
+            Console.WriteLine("\n %  Overall: " + "\t" + storeNames[0] + "\t" + storeNames[1] + "\t" + storeNames[2] + "\t" + storeNames[3]);
             Console.WriteLine("\t\t" + Math.Round(dubstore1Percent, 1) + "\t" + Math.Round(dubstore2Percent, 1) + "\t" + Math.Round(dubstore3Percent, 1) + "\t" + Math.Round(dubstore4Percent, 1));
             Console.ReadLine();
         }
     }
 }
-
