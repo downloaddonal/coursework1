@@ -26,12 +26,13 @@ namespace courseworkone
                 {
                     Console.WriteLine("Please enter the name of Store: ");
                     storeNames[i] = Console.ReadLine();
-                    Console.WriteLine("Please enter the quarterly sales for " + storeNames[i] + " please enter the digits in thousands i.e 12,000 as 12 : ");
+                    Console.WriteLine("Please enter the quarterly sales for " + storeNames[i] + " please enter the digits in thousands i.e 12,000 as 12");
                     //another for loop instead of copy and pasting the same code for the question 4 times
                     for (int j = 0; j < storeNames.Length; j++)
                     {
-                        Console.Write("Please enter the Q" + (j +1) + " sales for " + storeNames[i]);
+                        Console.Write("Please enter the Q" + (j + 1) + " sales for " + storeNames[i] + ": ");
                         storeSales[i, j] = Convert.ToInt32(Console.ReadLine());
+                        Console.Writeline();
                     }
                 }
             }
