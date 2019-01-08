@@ -24,7 +24,7 @@ namespace courseworkone
             {
                 for (int i = 0; i < storeNames.Length; i++)
                 {
-                    Console.Write("\nPlease enter the name of Store: ");
+                    Console.Write("Please enter the name of Store: ");
                     storeNames[i] = Console.ReadLine();
                     Console.Write("Please enter the quarterly sales for " + storeNames[i] + " please enter the digits in thousands i.e 12,000 as 12 :\n");
                     //another for loop instead of copy and pasting the same code for the question 4 times
@@ -38,7 +38,7 @@ namespace courseworkone
 
             catch (FormatException ex)
             {
-                Console.WriteLine(ex.Message + "Please enter a number");
+                Console.WriteLine("\n" + ex.Message + "Please enter a number");
                 Console.WriteLine("Program will now close press any key to exit");
                 Console.ReadKey();
                 return;
